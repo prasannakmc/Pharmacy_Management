@@ -1,0 +1,211 @@
+ <!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Orders</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+     
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive-styles.css">
+    <style type="text/css">
+        footer ul li a {
+            color: #121212;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light top-nav">
+            <a class="navbar-brand" href="/"><img class="company-logo" src="./assets/images/logo-standard.png"></a>
+
+            <div class="ml-auto">
+                <ul class="navbar-nav">
+                	<li class="nav-item">
+                        <a class="nav-link" href="#contact"><span class="mobile-hide">Contact</span> <i class="fas fa-address-book"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cart"><span class="mobile-hide">Cart</span> <i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutus"><span class="mobile-hide">About Us</span> <i class="fas fa-info-circle"></i></a>
+                    </li>
+                    <li class="nav-item" id="log">
+                        
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light pink second-nav">
+
+            <!-- Collapse button -->
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-align-left"></i>
+                <i class="fas fa-times"></i>
+            </button>
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/medication">Medication</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/allergies">Allergies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cosmetics">Cosmetics</a>
+                    </li>
+                </ul>
+                <!-- Links -->
+                <!-- Search form -->
+                
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="container row" style="width: 100%;margin:auto;margin-top: 5%">
+                <div class="col-md-9">
+                    <h5>Your Orders</h5><hr>
+                    <table class="table table-responsive table-hover " id="ordertable">
+                    </table>
+			      </div>
+            </div>
+
+            <div class="container " style="margin-bottom: 5%">
+         
+              <div class="row">
+                 <div class="col-md-4 col-6 text-left">
+                   <a href="/">
+                    <input class="btn btn-primary pt-2 pb-2" type="button" style="font-size:12px;" value="Continue Shopping">
+                    </a>
+                 </div>
+              </div>
+       		</div>
+
+            <footer id="contact" class="bg-light" style="color: #121212">
+            <div class="container-fluid ">
+                <div class="row m-0">
+                    <div class="col-md-4 col-12 sub_footer">
+                         <div class="" style="width:70%;margin:auto">
+                             <div class="subscribe">
+                                 <h4 style="margin-bottom: 25px;" class="text-center">Contact Us</h4>
+                                 <input style="margin: 2% 0%" id="subname" type="text" class="form-control" placeholder="Name">
+                                 <input style="margin: 2% 0%" id="subemail" type="text" class="form-control" placeholder="Email">
+                                 <input style="margin: 2% 0%" id="submessage" type="text" class="form-control" placeholder="Message">
+                                 <button style="width:100%;margin-top: 2%;" class="text-center" onclick="subscribe()">Subscribe</button>
+                             </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-12 sub_footer text-center">
+                        <h5><u>SHOP BY CATEGORY</u></h5>
+                         <ul>
+                             <li><a href="/medication">Medication</a></li>
+                             <li><a href="/allergies">Allergies</a></li>
+                             <li><a href="/cosmetics">Cosmetics</a></li>
+                         </ul>
+                    </div>
+                    <div class="col-md-4 col-12 sub_footer text-center">
+                        <h5><u>CONTACT INFO</u></h5>
+                        <div class="contact_wrapper">
+                            <div class="contact_info">
+                                <h6>Address</h6>
+                                <p>2122 Pine Street, Stettler, Alberta, T0C 2L2, CANADA</p>
+                            </div>
+                       
+                            <div class="contact_info">
+                                <h6>Mail</h6>
+                                <p>bestcare@Example.com</p>
+                            </div>
+                       
+                            <div class="contact_info">
+                                <h6>Phone</h6>
+                                <p>+91 1234123456</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                   <p style="margin-bottom: 10px;">&copy;2021</p> 
+                   <h6 style="margin-bottom: 10px;">CONNECT WITH US</h6>
+                   <div class="social_media">
+                       <a href="#">
+                            <span class="fab fa-facebook-square"></span>
+                       </a>
+                       <a href="#">
+                            <span class="fab fa-instagram"></span>
+                       </a>
+                       <a href="#">
+                            <span class="fab fa-twitter"></span>
+                       </a>
+                   </div>
+                </div>
+            </div>     
+        </footer>
+
+        </div>
+    </main>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<script>
+    $('.responsive').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots:false,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+   
+  });
+
+</script>
+
+<script type="text/javascript" src="./assets/js/index.js"></script>
+<script type="text/javascript" src="./assets/js/orders.js"></script>
+</html>
